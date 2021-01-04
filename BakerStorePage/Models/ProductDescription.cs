@@ -7,5 +7,9 @@ namespace BakerStorePage.Models
 {
     public class ProductDescription
     {
+        public int Id;
+        public string Name;
+        public string Description;
+        public decimal Price;
     }
 }
