@@ -11,7 +11,7 @@ namespace BakerStorePage.Models
         {
             new Item {Name = "Rundstykke", Price = 5},
             new Item {Name = "Rugbrød", Price = 25},
-            new Item {Name = "Baguette", Price = 30}
+            new Item {Name = "Wienerbrød", Price = 30}
         }.AsQueryable<Item>();
     }
 }
