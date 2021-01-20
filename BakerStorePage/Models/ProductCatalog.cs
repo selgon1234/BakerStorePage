@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BakerStorePage.Models
 {
-    public interface ProductCatalog
+    public interface IProductCatalog
     {
         IQueryable<Item> Items { get; }
     }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BakerStorePage.Models
 {
-    public class DummyProducts : ProductCatalog
+    public class DummyProducts : IProductCatalog
     {
         public IQueryable<Item> Items => new List<Item>
         {

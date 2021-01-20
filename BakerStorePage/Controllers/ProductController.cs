@@ -9,9 +9,9 @@ namespace BakerStorePage.Controllers
 {
     public class ProductController : Controller
     {
-        private ProductCatalog repository;
+        private IProductCatalog repository;
 
-        public ProductController(ProductCatalog repo)
+        public ProductController(IProductCatalog repo)
         {
             repository = repo;
         }

@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using BakerStorePage.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BakerStorePage
 {
@@ -25,7 +26,9 @@ namespace BakerStorePage
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<ProductCatalog, DummyProducts>();
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
+                Configuration["Data:BakerStorePageItems:ConnectionString"]));
+            services.AddTransient<IProductCatalog, EFProductCatalog>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
