@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace BakerStorePage.Models
+﻿namespace BakerStorePage.Models
 {
     public class Customer
     {
-        public int Id;
-        public string FirstName;
-        public string LastName;
+        public int CustomerId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+
+        public Customer(int customerId, string firstName, string lastName)
+        {
+            CustomerId = customerId;
+            FirstName = FirstName;
+            LastName = LastName;
+        }
     }
 }
